@@ -44,3 +44,31 @@ let orby_2 = 0x0404
 let bw_or = orby_1 ||| orby_2
 
 
+// Strings
+
+let vowels = ['a'; 'e'; 'i'; 'o'; 'u']
+
+let lotsalines = "How to \
+break your string over \
+multiple lines"
+
+let controlchars = "\' Single quote \" Double quote \\ Backslash \b Backspace \n Newline \r Carriage return \t"
+
+printfn "%c" controlchars.[0]
+
+let literalchars = @"\' \t \r"
+
+let quotedstring = """There are "so many" 'quotoes' here"""
+
+let bytestr = "bytes"B
+
+// Logic
+
+let itbe = true && false || not false
+
+(* < <= > >= <> == Compare *)
+
+let ussee = compare 100 101
+
+
+ 
