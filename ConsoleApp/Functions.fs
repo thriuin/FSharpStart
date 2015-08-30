@@ -54,6 +54,22 @@ let customtest x = if x > 100 then true else false
 let t1a, t1b = List.partition customtest t1
 let t1100 = List.tryFind customtest t1
 
+// List aggretate example
+
+let toString (x: int) =
+    string x
+
+let stringList = List.map toString t1
+
+let add x y = x + y
+let totalValue = List.reduce add t1 
+let totlaValueFold = List.fold add 1000 t1
+
+let posPrint x = printfn "%d " x
+ 
+let printList = List.iter posPrint t1
+
+
 // Units
 
 let z = ()
