@@ -61,9 +61,10 @@ let toString (x: int) =
 
 let stringList = List.map toString t1
 
-let add x y = x + y
-let totalValue = List.reduce add t1 
-let totlaValueFold = List.fold add 1000 t1
+let addFold x y = x + y
+let totalValue = List.reduce addFold t1
+let initValue = 1000 
+let totlaValueFold = List.fold addFold initValue t1
 
 let posPrint x = printfn "%d " x
  
@@ -75,6 +76,30 @@ let printList = List.iter posPrint t1
 let z = ()
 
 ignore (lessthanten 12)
+
+// Option
+
+let moreThan1 x =
+    if x > 1 then
+        Some(x)
+    else
+        None
+
+let optResult = moreThan1 4
+Option.get optResult
+
+// Print
+
+let an_int = 100
+let a_string = "A String"
+let a_float = 1.1
+let a_char = 'x'
+let an_object = (' ', 'y', 'z')
+
+let printer p = 
+    printfn "int %d, hex %x, oct %o, float %f, char %c, bool %b, object %O, anything %A" _
+    an_int, an_int, an_int, a_float, a_char, true, an_object, an_object
+
 
 
 
