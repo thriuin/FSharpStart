@@ -86,7 +86,7 @@ let moreThan1 x =
         None
 
 let optResult = moreThan1 4
-Option.get optResult
+let optResultVal = Option.get optResult
 
 // Print
 
@@ -97,8 +97,7 @@ let a_char = 'x'
 let an_object = (' ', 'y', 'z')
 
 let printer p = 
-    printfn "int %d, hex %x, oct %o, float %f, char %c, bool %b, object %O, anything %A" _
-    an_int, an_int, an_int, a_float, a_char, true, an_object, an_object
+    printfn "int %d, hex %x, oct %o, float %f, char %c, bool %b, object %O, anything %A"  an_int, an_int, an_int, a_float, a_char, true, an_object, an_object
 
 
 
