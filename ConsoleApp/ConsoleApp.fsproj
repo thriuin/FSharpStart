@@ -53,6 +53,7 @@
     <Compile Include="MathExamples.fs" />
     <Compile Include="Program.fs" />
     <Compile Include="Functions.fs" />
+    <Compile Include="Functional.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
