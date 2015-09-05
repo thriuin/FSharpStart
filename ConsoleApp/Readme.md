@@ -1,4 +1,4 @@
-F#
-==
+Basic Examples
+==============
 
-It's like Python met .NET and they had a functional baby together
+This application has various snippets exploring different aspects of the F# language.
