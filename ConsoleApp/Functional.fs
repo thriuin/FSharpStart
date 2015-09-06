@@ -71,7 +71,33 @@ let (%%%) (x:int) (y: int) =
 let divides = 99 %%% 3
 let dontdivides = 99 %%% 4
 
+// pipe forward... and backward (used for altering precedence)
 
+let alist = [1 .. 5]
+
+let total = 
+    List.map (fun x -> x * 2) alist
+    |> List.map (fun (z:int) -> float z)
+    |> List.map (fun y -> y ** 2.0) 
+    |> List.sum
+
+let totalB = List.map (fun (z:int) -> float z) <| alist 
+
+
+// forward composition... and backward
+
+let totalComposed =
+    List.map (fun x -> x * 2) 
+    >> List.map (fun (z:int) -> float z)
+    >> List.map (fun y -> y ** 2.0) 
+    >> List.sum
+
+let total2 = totalComposed alist
+
+let totalComposedB = List.sum << List.map (fun (z:int) -> float z)
+
+let total2B = totalComposedB alist
+     
 
 
 
