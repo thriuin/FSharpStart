@@ -70,5 +70,29 @@ let itbe = true && false || not false
 
 let ussee = compare 100 101
 
+// discriminated unions
+
+type Element = 
+    | Earth of Element 
+    | Air of Element
+    | Water of Element
+    | Fire of Element
+    | Fifth of Emotion
+and Emotion = 
+    | Love 
+    | Hate 
+    | Envy
+
+let fifthElement = Fifth(Love)
+let falseElement = Fifth(Envy)
+
+let detect5thelem elem = 
+    match elem with
+    | Fifth(Love) -> true
+    | _ -> false
+
+let testelem = detect5thelem fifthElement
+let testfalseelem = detect5thelem falseElement
+
 
  

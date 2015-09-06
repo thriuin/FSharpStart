@@ -54,6 +54,7 @@
     <Compile Include="Program.fs" />
     <Compile Include="Functions.fs" />
     <Compile Include="Functional.fs" />
+    <Compile Include="Matching.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
